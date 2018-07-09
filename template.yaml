@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  ExampleJavaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: com.example.hellosap.HelloSAP::handleRequest
+      CodeUri: ./build/libs/aws-lambda-hello-sap.jar
+      Runtime: java8
+      Timeout: 60

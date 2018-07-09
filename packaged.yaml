@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  ExampleJavaFunction:
+    Properties:
+      CodeUri: s3://otomo-devel/hellosap/dead7e763c3b7df9ca6c0594c35d808e
+      Handler: com.example.hellosap.HelloSAP::handleRequest
+      Runtime: java8
+      Timeout: 60
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31

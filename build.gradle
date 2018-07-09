@@ -1,0 +1,19 @@
+apply plugin: 'java'
+
+group = 'com.example'
+sourceCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'com.amazonaws:aws-lambda-java-core:1.2.0'
+    compile files('lib/sapjco3.jar')
+}
+
+jar {
+  into('lib') {
+    from 'lib'
+  }
+}
