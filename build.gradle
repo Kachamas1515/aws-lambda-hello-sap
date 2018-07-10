@@ -16,4 +16,7 @@ jar {
   into('lib') {
     from 'lib'
   }
+  from {
+    configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+  }
 }
